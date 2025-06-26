@@ -527,10 +527,13 @@ line-height: 1.5;
             <br>
             	<div class="event"><header class="hundredone">• ALL IMAGES</header></div>
     <br>
-    	<img src="https://i.ibb.co/Nd2prpKT/IMG-20250530-WA0040.jpg" class="poster" /> 
+    	<img src="https://i.ibb.co/Nd2prpKT/IMG-20250530-WA0040.jpg" class="poster" /><br>
+    <img src="https://i.ibb.co/gL3j2Crd/IMG-20250624-WA0002.jpg" class="poster" /> <br>
+    <img src="https://i.ibb.co/HffkQczC/IMG-20250624-WA0003.jpg" class="poster" /> <br>
+    <img src="https://i.ibb.co/6Rb51T54/IMG-20250624-WA0001.jpg" class="poster" />
     	
     
-    	<a class="download-btn1" href="https://ssf-kariparambu.github.io/Gallery/">Hide Images</a>
+    	<a class="download-btn1" href="#" onclick="goBack()">Hide Images</a>
     	<br>
         <br>
     <!--===== FOOTER =====-->
@@ -550,7 +553,20 @@ line-height: 1.5;
 
             </div>
 </div>
-        
+        <script>
+function goBack() {
+  const params = new URLSearchParams(window.location.search);
+  const source = params.get('from');
+
+  if (source === 'Sahityotsav') {
+    window.location.href = "https://ssf-kariparambu.github.io/Sahityotsav/";
+  } else if (source === 'Gallery') {
+    window.location.href = "https://ssf-kariparambu.github.io/Gallery/";
+  } else {
+    window.history.back(); // default fallback
+  }
+}
+</script>
     <!--===== SCROLL REVEAL =====-->
 
         <script src="https://unpkg.com/scrollreveal"></script>
